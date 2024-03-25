@@ -1,0 +1,52 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 45px 10px 45px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+.header-title{
+    
+}
+.header-buttons{
+    display: flex;
+}
+header button{
+    padding: 5px 10px;
+    height: 40px;
+    border: solid 1px lightgray;
+    border-radius: 10px;
+
+
+
+    font-size: 17px;
+
+    cursor: pointer;
+    
+}
+.header-history-button{
+    margin-right: 10px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+}
+.header-history-button span{
+    padding: 0;
+    margin-right: 5px;
+}
+
+.header-newlist-button{
+    background-color: #5C6BC0;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header-newlist-button span{
+    padding: 0;
+    margin-right: 5px;
+}

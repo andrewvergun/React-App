@@ -1,0 +1,57 @@
+.card{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 15px 15px 15px;
+    border-radius: 25px;
+
+    background-color: #EEEEEE;
+    
+}
+.card-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-title h4{
+    font-size: 17px;
+    margin-left: 15px;
+}
+.card-title button{
+    
+    font-size: 17px;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+.card-description{
+    font-size: 17px;
+    margin: 0 15px;
+}
+.card-date{
+    font-size: 17px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.card-date span{
+    margin-right: 5px;
+}
+.card-priority{
+    display: flex;
+    justify-content: center;
+    margin: 0 15px 15px 15px;
+    display: flex;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    width: 70px;
+}
+.card-dropdown{
+    margin: 0 15px 15px 15px;
+    height: 32px;
+    border: none;
+    border-radius: 7.5px;
+    font-size: 17px;
+    background-color: #E0E0E0;
+}

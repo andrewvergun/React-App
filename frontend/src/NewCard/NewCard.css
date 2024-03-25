@@ -1,0 +1,138 @@
+.new-card-background{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.new-card{
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    border-radius: 25px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.new-card-top{
+    background-color:#5C6BC0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px 25px 0 0;
+    height: 40px;
+}
+.new-card-exit{
+    background-color: transparent;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0 25px 0 0;
+    cursor: pointer;
+}
+.new-card-top div span{
+    margin: 10px 7.5px;
+    color: white;
+    cursor: pointer;
+}
+.new-card-content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 520px;
+    background-color: #fff;
+    
+}
+.new-card-main-title{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.new-card-main-title button{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    border: solid 1px darkgrey;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+.new-card-main-title button span{
+    margin-right: 5px;
+}
+.new-card-main{
+    padding: 20px;
+    height: 100%;
+}
+
+.new-card-activity{
+    background-color: #ECEFF1;
+    height: 520px;
+    padding: 20px;
+    border-radius: 0 0 25px 0;
+    
+}
+.status, .duedate, .priority{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    align-items: center;
+    
+    
+}
+.status-title, .duedate-title, .priority-title{
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    
+    
+}
+.status-title span, .duedate-title span, .priority-title span{
+    margin-right: 5px;
+}
+.new-card-description p{
+    font-size: 17px;
+}
+.new-card-main-title input{
+    width: 375px;
+    font-size: 27px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 3px #E0E0E0;
+    color: black;
+    margin: 14px 0 14px 0;
+}
+.new-card-description textarea{
+    height: 140px;
+    width: 450px;
+    padding: 0px;
+    border: solid 1px #E0E0E0;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    font-size: 17px;
+}
+
+.status select, .priority select, .duedate input{
+    height: 40px;
+    width: 200px;
+    padding: 0px;
+    border: solid 1px #E0E0E0;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    font-size: 17px;
+
+}
