@@ -9,7 +9,7 @@ export class Task extends BaseEntity {
     @Column()
     title: string;
     @Column()
-    status: TaskStatus;
+    status: string;
     @Column()
     dueDate: string;
     @Column()

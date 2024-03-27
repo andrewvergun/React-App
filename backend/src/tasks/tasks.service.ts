@@ -41,7 +41,7 @@ export class TasksService {
         const task = new Task();
         task.title = title;
         task.description = description;
-        task.status = TaskStatus.TODO;
+        task.status = status;
         task.dueDate = dueDate;
         task.priority = priority;
         await task.save();
@@ -56,14 +56,22 @@ export class TasksService {
         console.log(result);
     }
 
-    async updateTaskStatus(
+    async updateCard(
         id: number,
-        status: TaskStatus,
+        status: string,
+        title: string,
+        dueDate: string,
+        priority: string,
+        description: string,
         
       ): Promise<Task> {
         const task = await this.getTaskById(id);
     
         task.status = status;
+        task.title = title;
+        task.dueDate = dueDate;
+        task.priority = priority;
+        task.description = description;
         await task.save();
     
         return task;

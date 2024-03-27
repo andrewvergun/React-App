@@ -3,7 +3,7 @@ import './NewCardEdit'
 
 import { useNavigate } from "react-router-dom";
 
-function NewCard(){
+function NewCard(taskId){
     const navigate = useNavigate();
 
     const handleGoBack = () => {
@@ -21,7 +21,7 @@ function NewCard(){
                     <div className='new-card-main'>
                         <div className='new-card-main-title'>
                             <h2>Task Name</h2>
-                            <button onClick={() => navigate('/new-card-edit')}><span className="material-symbols-outlined">edit_note</span>Edit Task</button>
+                            <button onClick={() => navigate(`/new-card-edit/${taskId}`)}><span className="material-symbols-outlined">edit_note</span>Edit Task</button>
                         </div>
                         <div className='new-card-chars'>
                             <div className='status'><h3 className='status-title'><span className="material-symbols-outlined">target</span>Status</h3> <h3>In progress</h3></div>

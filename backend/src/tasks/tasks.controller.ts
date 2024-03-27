@@ -10,25 +10,15 @@ export class TasksController {
     constructor (private tasksService: TasksService) {}
 
     @Get()
-    getTasks(
-        // @Query(ValidationPipe) filterDto: GetTasksFilterDto
-    ): Promise<Task[]> {
-        // if (Object.keys(filterDto).length) {
-        //   return this.tasksService.getTasksWithFilters(filterDto);
-        // } else {
-        return this.tasksService.getAllTasks();
-        // }
+    getTasks(): Promise<Task[]> 
+    {
+            return this.tasksService.getAllTasks();
     }
-    // @Get()
-    // getAllTasks(): Promise <Task[]>{
-    //     return this.tasksService.getAllTasks();
-    // }
 
     @Get('/:id')
     getTaskById(@Param('id', ParseIntPipe) id: number):Promise<Task>
     {
         return this.tasksService.getTaskById(id);
-
     }
 
     @Post()
@@ -42,11 +32,15 @@ export class TasksController {
         return this.tasksService.deleteTask(id);
     }
 
-    @Patch('/:id/status')
-    updateTaskStatus(
+    @Patch('/:id/card')
+    updateCard(
       @Param('id', ParseIntPipe) id: number,
-      @Body('status', TaskStatusValidationPipe) status: TaskStatus,
+      @Body('status', TaskStatusValidationPipe) status: string,
+      @Body('title') title: string,
+      @Body('dueDate') dueDate: string,
+      @Body('priority') priority: string,
+      @Body('description') description: string,
     ): Promise<Task> {
-      return this.tasksService.updateTaskStatus(id, status);
+      return this.tasksService.updateCard(id, status, title, dueDate, priority, description);
     }
 }

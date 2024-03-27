@@ -12,19 +12,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .card-title h4{
     font-size: 17px;
     margin-left: 15px;
 }
-.card-title button{
-    
-    font-size: 17px;
-    border: none;
-    background-color: transparent;
 
-    cursor: pointer;
-}
 .card-description{
     font-size: 17px;
     margin: 0 15px;
