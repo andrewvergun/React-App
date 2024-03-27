@@ -57,7 +57,7 @@ function ItemContent(props: ItemContentProps) {
                 <h4>{props.title}</h4>
                 <div className="content-top-right">
                     <h4>{props.counter}</h4>
-                    <button><span className="material-symbols-outlined">more_vert</span></button>
+                    {/* <button><span className="material-symbols-outlined">more_vert</span></button> */}
                 </div>
             </div>
             <div className="content-bottom">

@@ -2,7 +2,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 45px 10px 45px;
+    margin: 0px 45px 0px 45px;
     position: fixed;
     top: 0;
     right: 0;
@@ -51,4 +51,11 @@ header button{
 .header-newlist-button span{
     padding: 0;
     margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    header{
+        margin: 0;
+        padding-left: 5%;
+    }
 }

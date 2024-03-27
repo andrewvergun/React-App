@@ -91,9 +91,9 @@ function NewCard() {
                             <textarea required value={description} onChange={(e) => setDescription(e.target.value)} placeholder=' Task Description'></textarea>
                         </div>
                     </div>
-                    <div className='new-card-activity'>
+                    {/* <div className='new-card-activity'>
                         <h3>Activity</h3>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

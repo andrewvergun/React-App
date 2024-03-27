@@ -1,5 +1,5 @@
 main{
-    margin: 75px 20px 100px 30px;
+    margin: 60px 20px 100px 30px;
 }
 .content-wrapper{
     display: grid;
@@ -71,4 +71,52 @@ main{
 }
 .content-bottom button span{
     margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    main {
+        margin: 30px 10px; /* Adjusted margins for better spacing on mobile */
+    }
+
+    .content-wrapper {
+        grid-template-columns: 100%;
+        margin-top: 70px; /* Two columns on mobile for better readability */
+    }
+
+    .item-content {
+        margin: 0; /* Removed right margin to prevent overflow on small screens */
+    }
+
+    .content-top {
+        display: flex;
+        flex-direction: column; /* Stacked layout for better display on small screens */
+        margin: 0 10px; /* Adjusted margins for better spacing on mobile */
+    }
+
+    .content-top h4 {
+        margin: 10px; /* Reduced margin for better spacing on mobile */
+    }
+
+    .content-top-right {
+        display: flex;
+        justify-content: space-between; /* Improved alignment for small screens */
+        font-size: 14px; /* Reduced font size for better readability on mobile */
+    }
+
+    .content-top-right h4 {
+        padding: 5px 10px; /* Reduced padding for better spacing on mobile */
+        margin: 0; /* Removed margin to optimize space */
+    }
+
+    .content-bottom {
+        flex-direction: column; /* Stacked layout for better display on small screens */
+        align-items: center; /* Center align buttons */
+    }
+
+    .content-bottom button {
+        font-size: 14px; /* Reduced font size for better readability on mobile */
+        width: 95%; /* Adjusted width for better fit on small screens */
+        margin: 10px 0px; /* Adjusted margin for better spacing on mobile */
+    }
 }

@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, Put } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { Task } from './task.entity';
 import { CreateTaskDto } from './dto/create-task.dto';
@@ -43,4 +43,9 @@ export class TasksController {
     ): Promise<Task> {
       return this.tasksService.updateCard(id, status, title, dueDate, priority, description);
     }
+
+    @Put(':id/status')
+  updateTaskStatus(@Param('id') id: number, @Body('status') newStatus: string) {
+    return this.tasksService.updateTaskStatus(id, newStatus);
+  }
 }

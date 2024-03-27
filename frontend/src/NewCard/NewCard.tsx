@@ -33,9 +33,9 @@ function NewCard(taskId){
                             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt recusandae, quae reiciendis distinctio a fuga numquam provident, veniam magni quis, non culpa amet. Quibusdam, quisquam praesentium labore beatae adipisci magnam.</p>
                         </div>
                     </div>
-                    <div className='new-card-activity'>
+                    {/* <div className='new-card-activity'>
                         <h3>Activity</h3>
-                    </div>
+                    </div> */}
                 </div>
                 
 
