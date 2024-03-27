@@ -23,7 +23,7 @@ The frontend is built with React, offering a user-friendly interface to interact
 
 ## Installation
 
-To run Your Application Name locally on your computer, follow these steps:
+To run Task Management System locally on your computer, follow these steps:
 
 ### Prerequisites
 
