@@ -11,7 +11,15 @@ The frontend is built with React, offering a user-friendly interface to interact
 
 - **All tasks are distributed between To-Do, In Progress, Planned and Closed folders**
   
-  ![Example Image](./assets/screenshots/Screenshot-View.png)
+  ![Screenshot 1](./assets/screenshots/Screenshot-View.png)
+
+- **When adding a task user can specify its title, status, due date, priority and description**
+
+  ![Screenshot 2](./assets/screenshots/Screenshot-Add-Task.png)
+
+- **User can delete a task**
+
+  ![Screenshot 3](./assets/screenshots/Screenshot-Delete-Task.png)
 
 ## Installation
 
