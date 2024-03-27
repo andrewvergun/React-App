@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 
 interface Task {
-    taskId: number;
+    id: number;
     title: string;
     description: string;
     dueDate: string;
@@ -66,13 +66,13 @@ function ItemContent(props: ItemContentProps) {
 
             {filteredTasks.map(task => (
                 <Card
-                    key={task.taskId}
+                    key={task.id}
                     title={task.title}
                     description={task.description}
                     date={task.dueDate}
                     priority={task.priority}
                     status={task.status}
-                    taskId= {task.taskId}
+                    id= {task.id}
                 />
             ))}
         </div>
