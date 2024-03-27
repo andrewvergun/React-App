@@ -34,7 +34,9 @@ To run Task Management System locally on your computer, follow these steps:
 ### Database Setup
 ```
 psql
+
 CREATE DATABASE taskmanagement;
+
 \c taskmanagement;
 
 CREATE TABLE tasks (
