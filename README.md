@@ -35,7 +35,7 @@ To run Your Application Name locally on your computer, follow these steps:
 
 1. Navigate to the `backend` folder.
 2. Install dependencies by running: ```npm i --force```
-3. 4. Install TypeORM by running: ```npm install -g typeorm```
+3. Install TypeORM by running: ```npm install -g typeorm```
 4. Install Database by running ```npm run typeorm migration:run```
 5. Run Backend by running: ```npm run start:dev```
 
