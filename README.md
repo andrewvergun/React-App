@@ -9,7 +9,8 @@ The frontend is built with React, offering a user-friendly interface to interact
 
 ## Features
 
-- **Data Management**: Provides CRUD functionalities for managing data stored in the PostgreSQL database.
+- **All tasks are distributed between To-Do, In Progress, Planned and Closed folders**
+  ![Example Image](./assets/screenshots/Screenshot-View.png)
 
 ## Installation
 
