@@ -31,6 +31,27 @@ To run Task Management System locally on your computer, follow these steps:
 - PostgreSQL installed and running
 - npm or yarn package manager installed
 
+### Database Setup
+```
+psql
+CREATE DATABASE taskmanagement;
+\c taskmanagement;
+
+CREATE TABLE tasks (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    status VARCHAR(50),
+    dueDate DATE,
+    priority INT,
+    description TEXT
+);
+
+\q
+
+
+
+```
+
 ### Backend Setup
 
 1. Navigate to the `backend` folder.
@@ -40,7 +61,7 @@ To run Task Management System locally on your computer, follow these steps:
 5. Run Backend by running: ```npm run start:dev```
 
 
-### Run Frontend
+### Frontend Setup
 1. Navigate to the `frontend` folder.
 2. Install dependencies by running: ```npm i --force```
 3. Run Backend by running: ```npm run dev```
