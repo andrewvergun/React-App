@@ -46,6 +46,6 @@ To run Task Management System locally on your computer, follow these steps:
 3. Run Backend by running: ```npm run dev```
 
 ## Usage
-Once both the backend and frontend servers are running, you can access Your Application Name by navigating to `http://localhost:3000` in your web browser.
+Once both the backend and frontend servers are running, you can access Task Management System by navigating to `http://localhost:3000` in your web browser.
 From there, you can start using the application's features.
    
