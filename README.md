@@ -32,6 +32,10 @@ To run Task Management System locally on your computer, follow these steps:
 - npm or yarn package manager installed
 
 ### Database Setup
+- Set up the Database running following commands in terminal.
+- Usename: postgres
+- password: hummer11
+
 ```
 psql
 
@@ -49,8 +53,6 @@ CREATE TABLE tasks (
 );
 
 \q
-
-
 
 ```
 
