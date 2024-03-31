@@ -2,6 +2,7 @@ import { Module, RequestMethod } from '@nestjs/common';
 import { MiddlewareConsumer, NestModule } from '@nestjs/common';
 import { CorsMiddleware } from './middleware/cors.middleware';
 import { TasksModule } from './tasks/tasks.module';
+import { BoardsModule } from './boards/boards.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 
@@ -10,6 +11,7 @@ import { typeOrmConfig } from './config/typeorm.config';
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig),
     TasksModule,
+    BoardsModule,
     
   ],
 

@@ -1,0 +1,27 @@
+.content-board{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    background-color: #EEEEEE;
+}
+
+.content-board-wrapper{
+    background-color: #EEEEEE;
+    border-radius: 25px;
+    padding-bottom: 15px;
+    margin: 0 0 15px 0;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.title-and-delete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+.title-and-delete button{
+    background-color: #F44336;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+}

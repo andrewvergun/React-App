@@ -10,42 +10,33 @@ export class TasksController {
     constructor (private tasksService: TasksService) {}
 
     @Get()
-    getTasks(): Promise<Task[]> 
+    async findAll(): Promise<Task[]> 
     {
-            return this.tasksService.getAllTasks();
+            return this.tasksService.findAll();
     }
 
     @Get('/:id')
-    getTaskById(@Param('id', ParseIntPipe) id: number):Promise<Task>
+    async findById(@Param('id', ParseIntPipe) id: number):Promise<Task>
     {
-        return this.tasksService.getTaskById(id);
+        return this.tasksService.findById(id);
     }
 
     @Post()
-    createTask(@Body() createTaskDto: CreateTaskDto):Promise<Task>
+    async create(@Body() createTaskDto: CreateTaskDto):Promise<Task>
     {
-        return this.tasksService.createTask(createTaskDto);
+        return this.tasksService.create(createTaskDto);
     }
 
     @Delete('/:id')
-    deleteTask(@Param('id', ParseIntPipe) id: number): Promise<void>{
-        return this.tasksService.deleteTask(id);
-    }
-
-    @Patch('/:id/card')
-    updateCard(
-      @Param('id', ParseIntPipe) id: number,
-      @Body('status', TaskStatusValidationPipe) status: string,
-      @Body('title') title: string,
-      @Body('dueDate') dueDate: string,
-      @Body('priority') priority: string,
-      @Body('description') description: string,
-    ): Promise<Task> {
-      return this.tasksService.updateCard(id, status, title, dueDate, priority, description);
+    async delete(@Param('id', ParseIntPipe) id: number): Promise<void>{
+        return this.tasksService.delete(id);
     }
 
     @Put(':id/status')
-  updateTaskStatus(@Param('id') id: number, @Body('status') newStatus: string) {
-    return this.tasksService.updateTaskStatus(id, newStatus);
-  }
+    updateTaskStatus(@Param('id') id: number, @Body('status') newStatus: string) {
+      return this.tasksService.updateTaskStatus(id, newStatus);
+    }
+
+
+
 }

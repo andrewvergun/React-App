@@ -5,6 +5,7 @@ export interface Task{
     status: TaskStatus;
     dueDate: string;
     priority: string;
+    boardId: number;
 
 }
 export enum TaskStatus{

@@ -1,24 +1,24 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-import { TaskStatus } from "./task.status.enum";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm";
+import { Board } from "../boards/board.entity";
 
 
 @Entity()
 export class Task extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
-    @Column()
+    @Column({ nullable: true })
     title: string;
-    @Column()
+    @Column({ nullable: true })
     status: string;
-    @Column()
+    @Column({ nullable: true })
     dueDate: string;
-    @Column()
+    @Column({ nullable: true })
     priority: string;
-    @Column()
+    @Column({ nullable: true })
     description: string;
 
-
-
-
-
+    @ManyToOne(() => Board, board => board.tasks)
+    board: Board;
+    @Column({ nullable: true })
+    boardId: number;
 }

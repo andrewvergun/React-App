@@ -6,7 +6,7 @@ import { TaskStatus } from './task.status.enum';
 @EntityRepository(Task)
 export class TaskRepository extends Repository<Task> {
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
-    const { title, description, priority, dueDate, status } = createTaskDto;
+    const { title, description, priority, dueDate, status, boardId } = createTaskDto;
 
     const task = new Task();
     task.title = title;
@@ -14,6 +14,7 @@ export class TaskRepository extends Repository<Task> {
     task.status = status;
     task.priority = priority;
     task.dueDate = dueDate;
+    task.boardId = boardId;
     await task.save();
 
     return task;
