@@ -11,11 +11,19 @@ The frontend is built with React, offering a user-friendly interface to interact
 
 - **All tasks are distributed between To-Do, In Progress, Planned and Closed folders**
   
-  ![Example Image](./assets/screenshots/Screenshot-View.png)
+  ![Screenshot 1](./assets/screenshots/Screenshot-View.png)
+
+- **When adding a task user can specify its title, status, due date, priority and description**
+
+  ![Screenshot 2](./assets/screenshots/Screenshot-Add-Task.png)
+
+- **User can delete a task**
+
+  ![Screenshot 3](./assets/screenshots/Screenshot-Delete-Task.png)
 
 ## Installation
 
-To run Your Application Name locally on your computer, follow these steps:
+To run Task Management System locally on your computer, follow these steps:
 
 ### Prerequisites
 
@@ -23,18 +31,46 @@ To run Your Application Name locally on your computer, follow these steps:
 - PostgreSQL installed and running
 - npm or yarn package manager installed
 
+### Database Setup
+- Set up the Database running following commands in terminal.
+- Usename: postgres
+- password: hummer11
+
+```
+psql
+
+CREATE DATABASE taskmanagement;
+
+\c taskmanagement;
+
+CREATE TABLE task (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    status VARCHAR(50),
+    dueDate DATE,
+    priority INT,
+    description TEXT
+);
+
+\q
+
+```
+
 ### Backend Setup
 
 1. Navigate to the `backend` folder.
 2. Install dependencies by running: ```npm i --force```
-3. Run Backed by running: ```npm run start:dev```
+3. Install TypeORM by running: ```npm install -g typeorm```
+4. Install Database by running ```npm run typeorm migration:run```
+5. Run Backend by running: ```npm run start:dev```
 
-### Run Frontend
+
+### Frontend Setup
 1. Navigate to the `frontend` folder.
 2. Install dependencies by running: ```npm i --force```
-3. Run Backend by running: ```npm run dev```
+3. Run Frontend by running: ```npm run dev```
 
 ## Usage
-Once both the backend and frontend servers are running, you can access Your Application Name by navigating to `http://localhost:3000` in your web browser.
+Once both the backend and frontend servers are running, you can access Task Management System by navigating to `http://localhost:3000` in your web browser.
 From there, you can start using the application's features.
    
