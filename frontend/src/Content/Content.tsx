@@ -1,14 +1,33 @@
-import Board from "./Board/Board";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Board from './Board/Board';
 
-import './Content.css'
+function Content() {
+    const [boards, setBoards] = useState<Board[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
 
-function Content(){
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await axios.get<Board[]>('http://localhost:3000/boards');
+                setBoards(response.data);
+            } catch (error) {
+                setError('Error fetching boards: ' + error.message);
+            } finally {
+                setLoading(false);
+            }
+        }
 
-    return(
+        fetchData();
+    }, [boards]); // Empty dependency array to ensure useEffect runs only once
+
+    return (
         <main>
             <div className="content-wrapper">
-                <Board title = "General"/>
+                
+                    { boards.map(board => <Board key={board.boardId} title={board.title} /> )}
+                
             </div>
         </main>
     );

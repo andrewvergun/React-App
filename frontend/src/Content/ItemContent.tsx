@@ -2,6 +2,7 @@ import Card from "./Card/Card";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import axios from "axios";
+import './Content.css'
 
 interface Task {
     id: number;

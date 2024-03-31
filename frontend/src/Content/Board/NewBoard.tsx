@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
+
 function NewBoard() {
   const [title, setTitle] = useState('');
+
   
 
   const handleSave = async () => {
@@ -13,7 +16,7 @@ function NewBoard() {
       }
       
       // Send a request to create a new board
-      await axios.post('/api/boards', { name: title });
+      await axios.post('http://localhost:3000/boards', { title: title });
       
       // Redirect or navigate to the boards page after saving
       // You may need to replace this with your navigation logic

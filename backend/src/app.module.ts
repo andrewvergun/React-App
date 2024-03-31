@@ -20,6 +20,7 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(CorsMiddleware).forRoutes(
       { path: 'tasks', method: RequestMethod.ALL },
+      { path: 'boards', method: RequestMethod.ALL }
     );
   }
 }
