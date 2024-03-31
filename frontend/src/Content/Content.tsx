@@ -26,7 +26,7 @@ function Content() {
         <main>
             <div className="content-wrapper">
                 
-                    { boards.map(board => <Board key={board.boardId} title={board.title} /> )}
+                    { boards.map(board => <Board key={board.boardId} title={board.title} boardId={board.boardId}/> )}
                 
             </div>
         </main>
