@@ -18,6 +18,7 @@ interface ItemContentProps {
     title: string;
     counter: number;
     status: string; // Add status prop
+    boardId: number;
 }
 
 function ItemContent(props: ItemContentProps) {
@@ -62,7 +63,7 @@ function ItemContent(props: ItemContentProps) {
                 </div>
             </div>
             <div className="content-bottom">
-                <button onClick={() => navigate('/new-card-edit')}><span className="material-symbols-outlined">add</span>Add New Card</button>
+                <button onClick={() => navigate(`/new-card-edit/${props.boardId}`)}><span className="material-symbols-outlined">add</span>Add New Card</button>
             </div>
 
             {filteredTasks.map(task => (

@@ -10,6 +10,6 @@ export class Board extends BaseEntity{
   @Column()
   title: string;
 
-  @OneToMany(() => Task, task => task.board)
+  @OneToMany(() => Task, task => task.board, {onDelete: 'CASCADE'})
   tasks: Task[];
 }

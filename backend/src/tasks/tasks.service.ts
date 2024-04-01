@@ -27,25 +27,10 @@ export class TasksService {
 
 
     async create(createTaskDto: CreateTaskDto): Promise<Task> {
-      
       const task = this.taskRepository.create(createTaskDto);
       return this.taskRepository.save(task);
 
-      // const { boardId, ...taskDetails } = createTaskDto;
-    
-      // const board = await this.boardRepository.findOne({ id: boardId });
-      // if (!board) {
-      //   throw new NotFoundException(`Board with ID "${boardId}" not found`);
-      // }
-    
-      // const task = this.taskRepository.create({
-      //   ...taskDetails,
-      //   boardId, // Set the boardId directly
-      // });
-    
-      // await this.taskRepository.save(task);
-      // return task;
-    }
+   }
 
     async delete(id: number): Promise<void>{
         const result = await this.taskRepository.delete(id);

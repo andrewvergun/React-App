@@ -1,11 +1,14 @@
-import './NewCard.css';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams, } from 'react-router-dom'; // Changed from useParams
+import { useContext, useState } from 'react';
+import { useParams, } from 'react-router-dom';
+import './NewCard.css';
+import { BoardIdContext } from '../context';
 
 
 function NewCard() {
     const { taskId } = useParams<{ taskId: number }>();
+    const { boardId } = useParams();
+
 
  // Change from useParams
     const [title, setTitle] = useState('');
@@ -13,6 +16,9 @@ function NewCard() {
     const [dueDate, setDueDate] = useState('');
     const [priority, setPriority] = useState('Low');
     const [description, setDescription] = useState('');
+
+
+
 
     const handleGoBack = () => {
         window.history.back(); // Use history to go back
@@ -25,6 +31,7 @@ function NewCard() {
             dueDate: dueDate,
             priority: priority,
             description: description,
+            boardId: boardId,
         }
 
         try {

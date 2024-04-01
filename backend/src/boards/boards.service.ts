@@ -13,8 +13,12 @@ export class BoardService {
   ) {}
 
   async findAll(): Promise<Board[]> {
-    return this.boardRepository.find();
-  }
+    return await this.boardRepository.find({
+        relations: ['tasks']
+    });
+}
+
+
 
   async create(title: string, tasks: Task[]): Promise<Board> {
     const board = new Board();

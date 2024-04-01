@@ -12,8 +12,8 @@ function App() {
         <Header />
         <Content />
         <Routes>
-          <Route path='/new-card/' element={<NewCard />} />
-          <Route path='/new-card-edit/' element={<NewCardEdit />} />
+          {/* <Route path='/new-card/' element={<NewCard />} /> */}
+          <Route path='/new-card-edit/:boardId' element={<NewCardEdit />} />
           <Route path='/new-board-add' element={<NewBoard/>}/>
         </Routes>
       </Router>

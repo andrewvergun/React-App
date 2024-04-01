@@ -1,7 +1,9 @@
 import axios from 'axios';
 import ItemContent from '../ItemContent';
 import './Board.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
+import { BoardIdContext } from '../../context';
+
 
 function Board({ boardId, title }) {
     const [todoCounter, setTodoCounter] = useState(0);
@@ -49,6 +51,9 @@ function Board({ boardId, title }) {
         }
     }
 
+    
+
+
     return (
         <div className="content-board-wrapper">
             <div className="title-and-delete">
@@ -57,10 +62,10 @@ function Board({ boardId, title }) {
             </div>
 
             <div className="content-board">
-                <ItemContent counter={todoCounter} title='To-Do' status='TODO'/>
-                <ItemContent counter={plannedCounter} title='Planned' status='PLANNED'/>
-                <ItemContent counter={inprogressCounter} title='In Progress' status='IN_PROGRESS'/>
-                <ItemContent counter={closedCounter} title='Closed' status='CLOSED'/>
+                <ItemContent boardId={boardId} counter={todoCounter} title='To-Do' status='TODO'/>
+                <ItemContent boardId={boardId} counter={plannedCounter} title='Planned' status='PLANNED'/>
+                <ItemContent boardId={boardId} counter={inprogressCounter} title='In Progress' status='IN_PROGRESS'/>
+                <ItemContent boardId={boardId} counter={closedCounter} title='Closed' status='CLOSED'/>
             </div>
         </div>
     );
