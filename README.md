@@ -10,6 +10,7 @@ The frontend is built with React, offering a user-friendly interface to interact
 ## Features
 
 - **All tasks are assigned to specific Board**
+- **When creating a board user can specify it's title**
 - **Board can be deleted**
 - **All tasks are distributed between To-Do, In Progress, Planned and Closed folders**
   
