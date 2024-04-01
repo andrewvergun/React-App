@@ -54,7 +54,10 @@ CREATE TABLE task (
     priority INT,
     description TEXT
 );
-
+CREATE TABLE board (
+    boardId SERIAL PRIMARY KEY,
+    title VARCHAR(255)
+);
 \q
 
 ```
