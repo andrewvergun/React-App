@@ -11,6 +11,7 @@ interface Task {
     dueDate: string;
     priority: string;
     status: string;
+    boardId: number;
     // Add other properties if present in your task object
 }
 
@@ -30,7 +31,7 @@ function ItemContent(props: ItemContentProps) {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await axios.get<Task[]>('http://localhost:3000/tasks');
+                const response = await axios.get<Task[]>('http://localhost:3000/tasks/');
                 setTasks(response.data);
             } catch (error) {
                 setError('Error fetching tasks: ' + error.message);
@@ -51,7 +52,7 @@ function ItemContent(props: ItemContentProps) {
     }
 
     // Filter tasks based on the status prop
-    const filteredTasks = tasks.filter(task => task.status === props.status);
+    const filteredTasks = tasks.filter(task => task.status === props.status && task.boardId === props.boardId);
 
     return (
         <div className='item-content'>
